@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="body-blocked" lang="en">
+<html class="body-blocked" lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,30 +15,30 @@
     <!-- Fonts END -->
 
     <!-- Libraries -->
-    <link href="/css/libs.css" rel="stylesheet">
+    <link href="css/libs.css" rel="stylesheet">
     <!-- Libraries END -->
 
     <!-- MIN Styles -->
-    <link href="/css/main.min.css" rel="stylesheet">
+    <link href="css/main.min.css" rel="stylesheet">
     <!-- MIN Styles END -->
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,7 +52,7 @@
 <!-- ******************************** MAIN PRELOADER ***************************************** -->
 <div class="preloader">
     <div class="preloader__content">
-        <img class="preloader__logo" src="/svg/logo.svg">
+        <img class="preloader__logo" src="svg/logo.svg">
         <div class="progressbar"></div>
     </div>
 </div>
@@ -64,14 +64,14 @@
                 <div class="header__wrap">
                     <div class="header__left-side">
                         <a href="#" class="logo-link">
-                            <img src="/svg/logo.svg">
+                            <img src="svg/logo.svg">
                         </a>
                     </div>
                     <div class="header__right-side">
-                        <a href="sign-up.html" class="my-button my-button_sign-up">
+                        <a href="sign-up" class="my-button my-button_sign-up">
                             <span>Sign Up</span>
                         </a>
-                        <a href="sign-in.html" class="my-button my-button_sign_in">
+                        <a href="sign-in" class="my-button my-button_sign_in">
                             <span>Sign In</span>
                         </a>
                     </div>
@@ -82,14 +82,14 @@
 </header>
 <main>
     <section id="prime-section" class="prime">
-        <img class="prime__img" src="/prime/prime-mockup.png">
+        <img class="prime__img" src="prime/prime-mockup.png">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="prime__content">
                         <h1>Manage your finance easily</h1>
                         <p>We created the Pocket Manager so that everyone can have access to basic budgeting help. We make budgeting easier and flexible for regular people. Help Is Always Free.</p>
-                        <a href="sign-up.html" class="my-button">
+                        <a href="sign-up" class="my-button">
                             <span>Get Started</span>
                         </a>
                     </div>
