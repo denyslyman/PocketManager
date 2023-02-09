@@ -1,68 +1,67 @@
 package com.pocketmanager.controller;
 
-import com.pocketmanager.entity.CustomUser;
-import com.pocketmanager.entity.UserDto;
+import com.pocketmanager.dto.UserDto;
+import com.pocketmanager.entity.User;
 import com.pocketmanager.service.UserService;
 import jakarta.validation.Valid;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.lang.model.element.ModuleElement;
+import java.util.List;
 
 @Controller
 public class MyController {
 
-    private final UserService userService;
+    private UserService userService;
 
     public MyController(UserService userService) {
         this.userService = userService;
     }
 
-    @GetMapping("/index")
-    public String homePage(){
+    @GetMapping("index")
+    public String home(){
         return "index";
     }
-    @GetMapping("/sign-up")
-    public String registration(Model model) {
-        UserDto userDto = new UserDto();
-        model.addAttribute("userDto", userDto);
-        return "sign-up";
-    }
+
     @GetMapping("/sign-in")
-    public String login(Model model) {
-        UserDto userDto = new UserDto();
-        model.addAttribute("userDto", userDto);
+    public String loginForm() {
         return "sign-in";
     }
 
-    @PostMapping("/sign-up-user")
-    public String registrationUser(@Valid @ModelAttribute ("userDto") UserDto userDto,
-                                   BindingResult result){
-        CustomUser existing = userService.findByEmail(userDto.getEmail());
+    // handler method to handle user registration request
+    @GetMapping("sign-up")
+    public String showRegistrationForm(Model model){
+        UserDto user = new UserDto();
+        model.addAttribute("user", user);
+        return "sign-up";
+    }
+
+    // handler method to handle register user form submit request
+    @PostMapping("/sign-up")
+    public String registration(@Valid @ModelAttribute("user") UserDto user,
+                               BindingResult result,
+                               Model model){
+        User existing = userService.findByEmail(user.getEmail());
         if (existing != null) {
             result.rejectValue("email", null, "There is already an account registered with that email");
         }
-
         if (result.hasErrors()) {
+            model.addAttribute("user", user);
             return "sign-up";
         }
-        userService.saveUser(userDto);
-        return "redirect:/sign-in";
-
-
+        userService.saveUser(user);
+        return "redirect:/sign-up?success";
     }
-    @PostMapping("/sign-in-user")
-    public String loginUser(@RequestParam String email,
-                            @RequestParam String password){
-        if (!userService.loginUser(email,password)){
-            return "/sign-in";
-        }else {
-            return "/account";
-        }
+
+    @GetMapping("/users")
+    public String listRegisteredUsers(Model model){
+        List<UserDto> users = userService.findAllUsers();
+        model.addAttribute("users", users);
+        return "users";
     }
 }

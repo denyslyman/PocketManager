@@ -233,7 +233,7 @@ p {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(../../img/prime/prime-bg.jpg);
+    background-image: url(../prime/prime-bg.jpg);
     background-size: cover;
     content: ""}
 .prime__img {
@@ -321,7 +321,7 @@ p {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url(../../img/prime/prime-bg.jpg);
+    background-image: url(../prime/prime-bg.jpg);
     background-size: cover;
     content: ""}
 .sign-wrap {
@@ -347,7 +347,7 @@ p {
     align-items: center;
     width: 560px;
     height: 100%;
-    background-image: url(../../img/sign/welcome-bg.jpg);
+    background-image: url(../sign/welcome-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 40px;
@@ -901,7 +901,7 @@ label:after {
     .sign-wrap__welcome {
         width: 380px;
         margin-right: 30px;
-        background-image: url(../../img/sign/welcome-bg.jpg);
+        background-image: url(../sign/welcome-bg.jpg);
         background-size: auto 120%;
         background-position: center;
     }

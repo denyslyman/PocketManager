@@ -38,7 +38,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -78,12 +78,17 @@
                     <div class="sign-form__head">
                         <a href="#" class="sign-link sign-link_active">Sign In</a>
                         <a href="sign-up" class="sign-link">Sign Up</a>
+                        <div th:if="${param.error}">
+                            <div style="color: red" class="alert alert-danger">Invalid Email or Password.</div>
+                        </div>
+                        <div th:if="${param.logout}">
+                            <div style="color: lime" class="alert alert-success">You have been logged out.</div>
+                        </div>
                     </div>
                     <div class="sign-form__body">
-                        <form class="my-form" method="post" th:action="@{/sign-in-user}" th:object="${userDto}">
+                        <form class="my-form" method="post" th:action="@{/sign-in}">
                             <label class="inp">
-                                <input id="userLogin" name="email" type="text" th:field="*{email}" placeholder="&nbsp;">
-                                <div class="error-message" style="color: firebrick" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+                                <input id="userLogin" name="email" type="text" placeholder="&nbsp;">
                                 <span class="placeholder">Email</span>
                                 <svg class="input-image" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M21.6175 9.11382C21.6175 12.7851 18.6739 15.7289 15 15.7289C11.3274 15.7289 8.38252 12.7851 8.38252 9.11382C8.38252 5.44253 11.3274 2.5 15 2.5C18.6739 2.5 21.6175 5.44253 21.6175 9.11382ZM15 27.5C9.57797 27.5 5 26.6187 5 23.2187C5 19.8174 9.60673 18.9674 15 18.9674C20.4233 18.9674 25 19.8487 25 23.2487C25 26.65 20.3933 27.5 15 27.5Z" fill="#AAB9DF"/>
@@ -92,9 +97,7 @@
                                 <small class="error-message"></small>
                             </label>
                             <label class="inp">
-                                <input id="userPassword" name="password" type="password" th:field="*{password}" placeholder="&nbsp;">
-                                <div class="error-message" style="color: firebrick" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
-
+                                <input id="userPassword" name="password" type="password" placeholder="&nbsp;">
                                 <span class="placeholder">Password</span>
                                 <svg class="input-image" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M21.9034 9.24501V11.1617C24.0563 11.8337 25.625 13.7827 25.625 16.1105V22.2816C25.625 25.1635 23.2358 27.5 20.2903 27.5H9.711C6.7642 27.5 4.375 25.1635 4.375 22.2816V16.1105C4.375 13.7827 5.94493 11.8337 8.09661 11.1617V9.24501C8.10931 5.51848 11.1958 2.5 14.9809 2.5C18.8169 2.5 21.9034 5.51848 21.9034 9.24501ZM15.0064 4.67381C17.5848 4.67381 19.6806 6.72339 19.6806 9.24501V10.8921H10.3194V9.22016C10.3321 6.71097 12.4279 4.67381 15.0064 4.67381ZM16.1114 20.5687C16.1114 21.1773 15.616 21.6618 14.9936 21.6618C14.384 21.6618 13.8886 21.1773 13.8886 20.5687V17.811C13.8886 17.2148 14.384 16.7303 14.9936 16.7303C15.616 16.7303 16.1114 17.2148 16.1114 17.811V20.5687Z" fill="#AAB9DF"/>
