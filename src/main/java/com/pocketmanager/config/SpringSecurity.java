@@ -1,10 +1,10 @@
 package com.pocketmanager.config;
 
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -29,25 +29,23 @@ public class SpringSecurity {
         http.csrf().disable()
                 .authorizeHttpRequests((authorize) ->
                         {
-                            try {
+
                                 authorize.requestMatchers("/sign-up/**").permitAll()
+                                        .requestMatchers("/account/**").hasRole("USER")
                                         .requestMatchers("/index").permitAll()
-                                        .requestMatchers("/users").hasRole("USER")
+                                        .requestMatchers("/recovery-pas").permitAll()
+                                        .requestMatchers("/new-pas/**").permitAll()
                                         .requestMatchers("/css/**", "/js/**", "/favicon/**",
-                                                "/prime/**", "/sign/**","/svg/**").permitAll()
-                                        .and()
-                                        .exceptionHandling().accessDeniedPage("/sign-in");
-                            } catch (Exception e) {
-                                throw new RuntimeException(e);
-                            }
+                                                "/prime/**", "/sign/**","/svg/**").permitAll();
                         }
+
+
                 ).formLogin(
                         form -> form
                                 .loginPage("/sign-in")
-                                .loginProcessingUrl("/sign-in")
-                                .defaultSuccessUrl("/users")
-                                .passwordParameter("password")
+                                .defaultSuccessUrl("/account")
                                 .usernameParameter("email")
+                                .passwordParameter("password")
                                 .permitAll()
                 ).logout(
                         logout -> logout

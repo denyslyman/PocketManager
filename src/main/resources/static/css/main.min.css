@@ -233,7 +233,7 @@ p {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(../prime/prime-bg.jpg);
+    background-image: url(../../img/prime/prime-bg.jpg);
     background-size: cover;
     content: ""}
 .prime__img {
@@ -321,7 +321,7 @@ p {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url(../prime/prime-bg.jpg);
+    background-image: url(../../img/prime/prime-bg.jpg);
     background-size: cover;
     content: ""}
 .sign-wrap {
@@ -347,7 +347,7 @@ p {
     align-items: center;
     width: 560px;
     height: 100%;
-    background-image: url(../sign/welcome-bg.jpg);
+    background-image: url(../../img/sign/welcome-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 40px;
@@ -885,6 +885,192 @@ label:after {
 .text-link_back:hover svg path {
     fill: #8dafff;
 }
+.buttons-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.buttons-row .my-button {
+    margin-right: 10px;
+}
+.buttons-row .my-button:last-child {
+    margin-right: 0;
+}
+.my-page {
+    min-height: 100vh;
+    background-image: url(../../img/prime/prime-bg.jpg);
+    background-size: cover;
+}
+.navigation {
+    position: fixed;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #14172f;
+    border-radius: 0 30px 30px 0;
+    padding: 30px;
+}
+.navigation nav {
+    margin-top: 100px;
+}
+.navigation nav ul {
+    width: 100%}
+.navigation nav ul li {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.navigation nav ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 50px;
+    color: #fff;
+    font-size: 17px;
+    background-color: rgba(241, 241, 241, .06);
+    border-radius: 15px;
+    padding-left: 30px;
+}
+.dashboard {
+    width: calc(100% - 300px);
+    margin-left: auto;
+    padding-top: 90px;
+}
+.my-container {
+    width: calc(100% - 60px);
+    margin: auto;
+}
+.table {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.table__item {
+    width: calc(50% - 15px);
+    padding: 20px;
+    background-color: rgba(241, 241, 241, .06);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .07);
+}
+.table__item span {
+    font-size: 65px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+}
+.modal__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.modal__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,  -50%);
+    transform: translate(-50%,  -50%);
+    background-color: #181826;
+    width: 500px;
+    height: auto;
+    padding: 0 20px 0 20px;
+    border-radius: 30px;
+}
+.modal__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1490196078);
+}
+.modal__close-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #2e2e41;
+    border: 2px solid rgba(0, 0, 0, 0);
+    -webkit-transition: .3s;
+    transition: .3s;
+    cursor: pointer;
+}
+.modal__close-button:hover {
+    border: 2px solid rgba(255, 255, 255, .4392156863);
+}
+.modal__close-button svg {
+    width: 50%;
+    height: auto;
+}
+.modal__close-button svg path {
+    fill: rgba(255, 255, 255, .4392156863);
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.modal__close-button:hover svg path {
+    fill: #fff;
+}
+.modal__wrapper h3 {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    letter-spacing: 0;
+    text-align: left;
+}
+.modal__wrapper .modal-body {
+    padding: 40px 0 30px 0;
+}
+.income-expense-form {
+    width: 100%}
+.income-expense-form .inp {
+    width: 100%;
+    margin-bottom: 0 !important;
+}
+.income-expense-form .inp input {
+    width: 100%}
+.income-expense-form .my-button {
+    margin-top: 20px !important;
+    width: 100%}
 @media(max-width: 1599.98px) {
     .sign-page {
         padding: 30px;
@@ -901,7 +1087,7 @@ label:after {
     .sign-wrap__welcome {
         width: 380px;
         margin-right: 30px;
-        background-image: url(../sign/welcome-bg.jpg);
+        background-image: url(../../img/sign/welcome-bg.jpg);
         background-size: auto 120%;
         background-position: center;
     }
@@ -1321,4 +1507,4 @@ label:after {
         height: 40px;
         padding: 0 17px;
     }
-}
+}/*# sourceMappingURL=main.min.css.map */

@@ -31,8 +31,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         if (user != null) {
 
             return new org.springframework.security.core.userdetails.User(user.getEmail(),
-                    user.getPassword(),true,
-                    true, true, true,
+                    user.getPassword(),
                     mapRolesToAuthorities(user.getRoles()));
         }else{
             throw new UsernameNotFoundException("Invalid email or password.");

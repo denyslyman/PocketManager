@@ -1,15 +1,10 @@
-/*!
- * Bootstrap Grid v5.0.2 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter,  Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    width: 100%;
-    padding-right: var(--bs-gutter-x, .75rem);
-    padding-left: var(--bs-gutter-x, .75rem);
-    margin-right: auto;
-    margin-left: auto;
-}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      width: 100%;
+      padding-right: var(--bs-gutter-x, .75rem);
+      padding-left: var(--bs-gutter-x, .75rem);
+      margin-right: auto;
+      margin-left: auto;
+  }
 @media (min-width:576px) {
     .container, .container-sm {
         max-width: 540px;
@@ -266,16 +261,16 @@
     --bs-gutter-y: 0;
 }
 .g-1, .gx-1 {
-    --bs-gutter-x: 0.25rem;
+    --bs-gutter-x: .25rem;
 }
 .g-1, .gy-1 {
-    --bs-gutter-y: 0.25rem;
+    --bs-gutter-y: .25rem;
 }
 .g-2, .gx-2 {
-    --bs-gutter-x: 0.5rem;
+    --bs-gutter-x: .5rem;
 }
 .g-2, .gy-2 {
-    --bs-gutter-y: 0.5rem;
+    --bs-gutter-y: .5rem;
 }
 .g-3, .gx-3 {
     --bs-gutter-x: 1rem;
@@ -368,16 +363,16 @@
         --bs-gutter-y: 0;
     }
     .g-sm-1, .gx-sm-1 {
-        --bs-gutter-x: 0.25rem;
+        --bs-gutter-x: .25rem;
     }
     .g-sm-1, .gy-sm-1 {
-        --bs-gutter-y: 0.25rem;
+        --bs-gutter-y: .25rem;
     }
     .g-sm-2, .gx-sm-2 {
-        --bs-gutter-x: 0.5rem;
+        --bs-gutter-x: .5rem;
     }
     .g-sm-2, .gy-sm-2 {
-        --bs-gutter-y: 0.5rem;
+        --bs-gutter-y: .5rem;
     }
     .g-sm-3, .gx-sm-3 {
         --bs-gutter-x: 1rem;
@@ -470,16 +465,16 @@
         --bs-gutter-y: 0;
     }
     .g-md-1, .gx-md-1 {
-        --bs-gutter-x: 0.25rem;
+        --bs-gutter-x: .25rem;
     }
     .g-md-1, .gy-md-1 {
-        --bs-gutter-y: 0.25rem;
+        --bs-gutter-y: .25rem;
     }
     .g-md-2, .gx-md-2 {
-        --bs-gutter-x: 0.5rem;
+        --bs-gutter-x: .5rem;
     }
     .g-md-2, .gy-md-2 {
-        --bs-gutter-y: 0.5rem;
+        --bs-gutter-y: .5rem;
     }
     .g-md-3, .gx-md-3 {
         --bs-gutter-x: 1rem;
@@ -572,16 +567,16 @@
         --bs-gutter-y: 0;
     }
     .g-lg-1, .gx-lg-1 {
-        --bs-gutter-x: 0.25rem;
+        --bs-gutter-x: .25rem;
     }
     .g-lg-1, .gy-lg-1 {
-        --bs-gutter-y: 0.25rem;
+        --bs-gutter-y: .25rem;
     }
     .g-lg-2, .gx-lg-2 {
-        --bs-gutter-x: 0.5rem;
+        --bs-gutter-x: .5rem;
     }
     .g-lg-2, .gy-lg-2 {
-        --bs-gutter-y: 0.5rem;
+        --bs-gutter-y: .5rem;
     }
     .g-lg-3, .gx-lg-3 {
         --bs-gutter-x: 1rem;
@@ -674,16 +669,16 @@
         --bs-gutter-y: 0;
     }
     .g-xl-1, .gx-xl-1 {
-        --bs-gutter-x: 0.25rem;
+        --bs-gutter-x: .25rem;
     }
     .g-xl-1, .gy-xl-1 {
-        --bs-gutter-y: 0.25rem;
+        --bs-gutter-y: .25rem;
     }
     .g-xl-2, .gx-xl-2 {
-        --bs-gutter-x: 0.5rem;
+        --bs-gutter-x: .5rem;
     }
     .g-xl-2, .gy-xl-2 {
-        --bs-gutter-y: 0.5rem;
+        --bs-gutter-y: .5rem;
     }
     .g-xl-3, .gx-xl-3 {
         --bs-gutter-x: 1rem;
@@ -776,16 +771,16 @@
         --bs-gutter-y: 0;
     }
     .g-xxl-1, .gx-xxl-1 {
-        --bs-gutter-x: 0.25rem;
+        --bs-gutter-x: .25rem;
     }
     .g-xxl-1, .gy-xxl-1 {
-        --bs-gutter-y: 0.25rem;
+        --bs-gutter-y: .25rem;
     }
     .g-xxl-2, .gx-xxl-2 {
-        --bs-gutter-x: 0.5rem;
+        --bs-gutter-x: .5rem;
     }
     .g-xxl-2, .gy-xxl-2 {
-        --bs-gutter-y: 0.5rem;
+        --bs-gutter-y: .5rem;
     }
     .g-xxl-3, .gx-xxl-3 {
         --bs-gutter-x: 1rem;
@@ -3590,4 +3585,3 @@
         display: none!important;
     }
 }
-/*# sourceMappingURL=bootstrap-grid.min.css.map */
